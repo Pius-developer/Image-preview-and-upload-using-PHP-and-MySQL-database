@@ -23,7 +23,7 @@
     // Upload image only if no errors
     if (empty($error)) {
       if(move_uploaded_file($_FILES["profileImage"]["tmp_name"], $target_file)) {
-        $sql = "INSERT INTO users SET profile_image='$profileImageName', bio='$bio'";
+        $sql = "UPDATE users SET profile_image='$profileImageName', bio='$bio'";
         if(mysqli_query($conn, $sql)){
           $msg = "Image uploaded and saved in the Database";
           $msg_class = "alert-success";
