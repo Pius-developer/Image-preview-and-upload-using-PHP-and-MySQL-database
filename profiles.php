@@ -3,6 +3,7 @@
   $results = mysqli_query($conn, "SELECT * FROM users");
   $users = mysqli_fetch_all($results, MYSQLI_ASSOC);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
