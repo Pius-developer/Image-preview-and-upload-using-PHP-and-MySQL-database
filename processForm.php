@@ -9,12 +9,14 @@
     // For image upload
     $target_dir = "images/";
     $target_file = $target_dir . basename($profileImageName);
+    
     // VALIDATION
     // validate image size. Size is calculated in Bytes
     if($_FILES['profileImage']['size'] > 200000) {
       $msg = "Image size should not be greated than 200Kb";
       $msg_class = "alert-danger";
     }
+    
     // check if file exists
     if(file_exists($target_file)) {
       $msg = "File already exists";
