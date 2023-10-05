@@ -15,9 +15,8 @@
     if($_FILES['profileImage']['size'] > 200000) {
       $msg = "Image size should not be greated than 200Kb";
       $msg_class = "alert-danger";
-    }
-    
-    // check if file exists
+    } 
+   // check if file exists
     if(file_exists($target_file)) {
       $msg = "File already exists";
       $msg_class = "alert-danger";
